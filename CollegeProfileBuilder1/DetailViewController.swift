@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     let realm = try! Realm()
     var detailItem: Colleges? {
         didSet {
-            // Update the view.
+            // Update the view!
             self.configureView()
         }
     }
