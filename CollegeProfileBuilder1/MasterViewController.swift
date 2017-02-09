@@ -20,7 +20,6 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
@@ -51,10 +50,10 @@ class MasterViewController: UITableViewController {
             textField.placeholder = "College Name"
         }
         alert.addTextField { (textField) in //need autocompletion for this one. then press enter enter
-            textField.placeholder = "College Enrollment (No. Students)"
+            textField.placeholder = "Location of College"
         }
         alert.addTextField { (textField) in
-            textField.placeholder = "Location Of College"
+            textField.placeholder = "College Enrollment (No. Students)"
             textField.keyboardType = UIKeyboardType.numberPad //accesses UIKEYBOARDTYPE's numberpad property
         }
         

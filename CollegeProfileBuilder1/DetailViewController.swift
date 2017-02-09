@@ -16,24 +16,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var collegeLocation: UITextField!
     @IBOutlet weak var collegeImage: UIImageView!
     let realm = try! Realm()
-    
     var detailItem: Colleges? {
         didSet {
             // Update the view.
             self.configureView()
         }
     }
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
     
-      func configureView() {
-        // Update the user interface for the detail item.
+    func configureView() {
         if let college = self.detailItem {
             if collegeName != nil {
                 collegeName.text = college.name
@@ -49,9 +44,9 @@ class DetailViewController: UIViewController {
             try! realm.write ({
                 college.name = collegeName.text!
                 college.location = collegeLocation.text!
-                college.numberOfStudents = Int(collegeEnrollment.text!)! //! is a forced unwrapping. There's a guarantee that we'll find an Int there.
+                college.numberOfStudents = Int(collegeEnrollment.text!)!
                 college.image = UIImagePNGRepresentation(collegeImage.image!)!
             })
+        }
     }
-}
 }
