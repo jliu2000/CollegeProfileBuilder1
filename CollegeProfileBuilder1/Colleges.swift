@@ -11,10 +11,10 @@ import RealmSwift
 
 class Colleges: Object {
     
-    var name = String()
-    var location = String()
-    var numberOfStudents = Int()
-    var image = Data()
+    dynamic var name = String()
+    dynamic var location = String()
+    dynamic var numberOfStudents = Int()
+    dynamic var image = Data()
     
     convenience init(name: String, location: String, numberOfStudents: Int, image: Data) {
         self.init()

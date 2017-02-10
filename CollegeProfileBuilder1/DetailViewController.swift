@@ -15,10 +15,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var collegeEnrollment: UITextField!
     @IBOutlet weak var collegeLocation: UITextField!
     @IBOutlet weak var collegeImage: UIImageView!
+    
     let realm = try! Realm()
+    
     var detailItem: Colleges? {
         didSet {
-            // Update the view!
             self.configureView()
         }
     }
@@ -47,6 +48,7 @@ class DetailViewController: UIViewController {
                 college.numberOfStudents = Int(collegeEnrollment.text!)!
                 college.image = UIImagePNGRepresentation(collegeImage.image!)!
             })
+            print("Save Completed")
         }
     }
 }

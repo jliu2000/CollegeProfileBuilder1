@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
@@ -37,6 +38,7 @@ class MasterViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +71,11 @@ class MasterViewController: UITableViewController {
             }
             if let enrollment = Int((collegeEnrollment.text)!) {
                 let college = Colleges(name: collegeName.text!, location: collegeLocation.text!, numberOfStudents: enrollment, image: UIImagePNGRepresentation(image)!)
+                
                 self.objects.append(college)
+                try! self.realm.write {
+                self.realm.add(college)
+                }
                 self.tableView.reloadData()
                 
             }
@@ -124,7 +130,6 @@ class MasterViewController: UITableViewController {
             try! self.realm.write{
                 self.realm.delete(college)
             }
-            objects.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
