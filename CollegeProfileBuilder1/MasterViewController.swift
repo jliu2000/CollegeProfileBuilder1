@@ -58,19 +58,23 @@ class MasterViewController: UITableViewController {
             textField.placeholder = "College Enrollment (No. Students)"
             textField.keyboardType = UIKeyboardType.numberPad //accesses UIKEYBOARDTYPE's numberpad property
         }
-        
+        alert.addTextField { (textField) in
+            textField.placeholder = "College URL"
+            textField.keyboardType = UIKeyboardType.URL
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)// handler is asking if there's something we want to do if the cancel gets activated. Could be useful.
         alert.addAction(cancelAction)
         let insertAction = UIAlertAction(title: "Add", style: .default) { (action) in
             let collegeName = alert.textFields![0] as UITextField
             let collegeLocation = alert.textFields![1] as UITextField
             let collegeEnrollment = alert.textFields![2] as UITextField
+            let collegeWebsite = alert.textFields![3] as UITextField
             guard let image = UIImage(named: collegeName.text!) else { //make sure it's the same as the city
                 print("missing \(collegeName.text!)'s image")
                 return
             }
             if let enrollment = Int((collegeEnrollment.text)!) {
-                let college = Colleges(name: collegeName.text!, location: collegeLocation.text!, numberOfStudents: enrollment, image: UIImagePNGRepresentation(image)!)
+                let college = Colleges(name: collegeName.text!, location: collegeLocation.text!, numberOfStudents: enrollment, image: UIImagePNGRepresentation(image)!, website: collegeWebsite.text!)
                 
                 self.objects.append(college)
                 try! self.realm.write {
