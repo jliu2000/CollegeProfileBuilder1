@@ -8,14 +8,14 @@
 
 import UIKit
 import RealmSwift
-
+import SafariServices
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
     let realm = try! Realm()
     lazy var colleges: Results<Colleges> = {
-        self.realm.objects(Colleges.self)
+    self.realm.objects(Colleges.self)
     }()
 
 
@@ -69,7 +69,7 @@ class MasterViewController: UITableViewController {
             let collegeLocation = alert.textFields![1] as UITextField
             let collegeEnrollment = alert.textFields![2] as UITextField
             let collegeWebsite = alert.textFields![3] as UITextField
-            guard let image = UIImage(named: collegeName.text!) else { //make sure it's the same as the city
+            guard let image = UIImage(named: collegeName.text!) else { //make sure it's the same as the  college
                 print("missing \(collegeName.text!)'s image")
                 return
             }
