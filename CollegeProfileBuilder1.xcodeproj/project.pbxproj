@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F65B0E71E71C4E100A1A257 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65B0E61E71C4E100A1A257 /* SearchViewController.swift */; };
 		3FB68CA91E48E591003BCD53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB68CA81E48E591003BCD53 /* AppDelegate.swift */; };
 		3FB68CAB1E48E591003BCD53 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB68CAA1E48E591003BCD53 /* MasterViewController.swift */; };
 		3FB68CAD1E48E591003BCD53 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB68CAC1E48E591003BCD53 /* DetailViewController.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F65B0E61E71C4E100A1A257 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3FB68CA51E48E591003BCD53 /* CollegeProfileBuilder1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeProfileBuilder1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB68CA81E48E591003BCD53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB68CAA1E48E591003BCD53 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				3FB68CAC1E48E591003BCD53 /* DetailViewController.swift */,
 				3FB68CD81E48E61A003BCD53 /* Colleges.swift */,
 				3FB68CAE1E48E591003BCD53 /* Main.storyboard */,
+				3F65B0E61E71C4E100A1A257 /* SearchViewController.swift */,
 				3FB68CB11E48E591003BCD53 /* Assets.xcassets */,
 				3FB68CB31E48E591003BCD53 /* LaunchScreen.storyboard */,
 				3FB68CB61E48E591003BCD53 /* Info.plist */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F65B0E71E71C4E100A1A257 /* SearchViewController.swift in Sources */,
 				3FB68CAD1E48E591003BCD53 /* DetailViewController.swift in Sources */,
 				3FB68CAB1E48E591003BCD53 /* MasterViewController.swift in Sources */,
 				3FB68CA91E48E591003BCD53 /* AppDelegate.swift in Sources */,

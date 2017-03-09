@@ -118,6 +118,15 @@
                                     <action selector="onLibraryButtonTapped:" destination="JEX-9P-axG" eventType="touchUpInside" id="qDD-tw-ufd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebd-qb-ebc">
+                                <rect key="frame" x="270" y="110" width="30" height="30"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6e1-jg-jma" kind="show" id="H59-BX-YSR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -131,11 +140,13 @@
                             <constraint firstItem="ypq-Ai-Yby" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" constant="41.5" id="SEw-UE-i6J"/>
                             <constraint firstItem="wnM-Cj-pbf" firstAttribute="centerX" secondItem="lPo-u4-4mq" secondAttribute="centerX" constant="-156" id="XTi-fg-1xh"/>
                             <constraint firstItem="1iF-3v-G1k" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" constant="125.5" id="Z9A-GP-1BD"/>
+                            <constraint firstItem="Ebd-qb-ebc" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" constant="97.5" id="ZxA-bu-Xuz"/>
                             <constraint firstItem="xgT-oH-WLu" firstAttribute="top" secondItem="9tf-SK-9CH" secondAttribute="bottom" constant="8" id="fYf-lp-sDZ"/>
                             <constraint firstItem="wnM-Cj-pbf" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="60" id="jz7-R3-AJh"/>
                             <constraint firstItem="ltM-PW-jGg" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" constant="-170.5" id="plZ-C3-ujw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wnM-Cj-pbf" secondAttribute="trailing" constant="43" id="qBA-PF-R0y"/>
                             <constraint firstItem="ltM-PW-jGg" firstAttribute="top" secondItem="xgT-oH-WLu" secondAttribute="bottom" constant="8" id="rbz-ME-IFZ"/>
+                            <constraint firstItem="Ebd-qb-ebc" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" constant="-208.5" id="u8v-qc-2Bm"/>
                             <constraint firstItem="ltM-PW-jGg" firstAttribute="centerX" secondItem="wnM-Cj-pbf" secondAttribute="centerX" constant="-9" id="v11-LJ-aEF"/>
                             <constraint firstItem="xgT-oH-WLu" firstAttribute="leading" secondItem="ltM-PW-jGg" secondAttribute="leading" id="wTe-Aa-pSv"/>
                         </constraints>
@@ -153,6 +164,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="128.18590704647679"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Rx6-KC-iYl">
+            <objects>
+                <viewController id="6e1-jg-jma" customClass="SearchViewController" customModule="CollegeProfileBuilder1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zHa-zH-dJb"/>
+                        <viewControllerLayoutGuide type="bottom" id="3DJ-RE-MrK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PzR-Uy-l7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fU3-31-d95">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="595" id="EKS-7B-6Fl"/>
+                                    <constraint firstAttribute="width" constant="375" id="PUp-4C-4cb"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fU3-31-d95" firstAttribute="leading" secondItem="PzR-Uy-l7Z" secondAttribute="leading" id="ZSD-Va-ZPY"/>
+                            <constraint firstItem="fU3-31-d95" firstAttribute="top" secondItem="zHa-zH-dJb" secondAttribute="bottom" constant="8" symbolic="YES" id="axn-21-hD7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="shD-nx-UVq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UfH-qa-1St" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517.5999999999999" y="127.28635682158921"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -229,6 +272,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
